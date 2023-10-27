@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <link rel="stylesheet" href="css/style.css">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>TipCalculator</title>
+</head>
+
+<body>
+   <div class="content">
+      <div class="wrapper">
+         <div class="logo"><img src="img/logo.svg" alt=""></div>
+         <div class="calculator">
+            <div class="input">
+               <div class="bill">
+                  <div class="bill__text">Bill</div>
+                  <div class="bill__error">Can't be zero</div>
+                  <input class="bill__input" type="number" placeholder="0" id="bills">
+               </div>
+               <div class="tip">
+                  <div class="tip__text">Select Tip%</div>
+                  <div class="tip__error">Can't be zero</div>
+                  <div class="tip__grid">
+                     <button class="tip__button" id="5percent">5%</button>
+                     <button class="tip__button" id="10percent">10%</button>
+                     <button class="tip__button" id="15percent">15%</button>
+                     <button class="tip__button" id="25percent">25%</button>
+                     <button class="tip__button" id="50percent">50%</button>
+                     <input class="tip__input" type="number" placeholder="Custom" id="customPercent">
+                  </div>
+               </div>
+               <div class="people">
+                  <div class="people__text">Number of People</div>
+                  <div class="people__error">Can't be zero</div>
+                  <input class="people__input" type="number" placeholder="0" id="peoples">
+               </div>
+            </div>
+            <div class="result">
+               <div class="display">
+                  <div class="display__amount">
+                     <div class="display__text">
+                        <h1>Tip Amount</h1>
+                        <h2>/ person</h2>
+                     </div>
+                     <div class="display__cash" id="amount">0.00</div>
+                  </div>
+                  <div class="display__total">
+                     <div class="display__text">
+                        <h1>Total</h1>
+                        <h2>/ person</h>
+                     </div>
+                     <div class="display__cash" id="total">0.00</div>
+                  </div>
+               </div>
+               <button class="result__reset" disabled>RESET</button>
+            </div>
+         </div>
+      </div>
+   </div>
+
+   <script src="js/script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,363 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+:focus, :active {
+  outline: none;
+}
+
+a:focus.a:active {
+  outline: none;
+}
+
+nav, footer, header, aside {
+  display: block;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+input, button, textarea {
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a, a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: inherit;
+  font-weight: 400;
+}
+
+input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+body {
+  background-color: #C5E4E7;
+  font-family: "Space Mono", monospace;
+}
+
+.wrapper {
+  height: 100%;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.logo {
+  margin: 40px 0 32px 0;
+}
+
+.calculator {
+  padding: 24px;
+  width: 100%;
+  max-width: 920px;
+  gap: 48px;
+  background-color: #FFF;
+  border-radius: 25px 25px 0 0;
+  display: flex;
+  flex-wrap: wrap;
+  color: #5E7A7D;
+  font-family: Space Mono;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 36px; /* 225% */
+  text-transform: capitalize;
+  justify-content: center;
+}
+
+.input {
+  flex: 0 1 auto;
+  display: flex;
+  flex-direction: column;
+  max-width: 380px;
+}
+
+.bill {
+  min-width: 311px;
+  flex: 1 1 auto;
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 26px;
+}
+.bill__text {
+  flex: 0 1 50%;
+  margin-bottom: 10px;
+}
+.bill__error {
+  transition: 0.3s opacity;
+  opacity: 0;
+  flex: 0 1 50%;
+  color: #C68277;
+  text-align: right;
+}
+.bill__error--active {
+  opacity: 1;
+}
+.bill__input {
+  flex: 0 1 100%;
+  min-width: 311px;
+  text-align: right;
+  color: #00474B;
+  padding: 5px 18px;
+  height: 47px;
+  border-radius: 7px;
+  background: #F4FAFA;
+  background-image: url(../img/icon-dollar.svg);
+  background-repeat: no-repeat;
+  background-position: 18px 50%;
+  transition: 0.4s cubic-bezier(0.57, 0.3, 0.51, 1) border;
+  border: 2px solid rgba(0, 0, 0, 0);
+}
+.bill__input:hover {
+  border: 2px solid #58A89D;
+}
+.bill__input--error {
+  border: 2px solid #C68277;
+}
+
+.tip {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-bottom: 26px;
+}
+.tip__error {
+  transition: 0.3s opacity;
+  opacity: 0;
+  flex: 0 1 50%;
+  color: #C68277;
+  text-align: right;
+}
+.tip__error--active {
+  opacity: 1;
+}
+.tip__grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+.tip__button {
+  flex: 1 1 auto;
+  width: 117px;
+  height: 48px;
+  border-radius: 5px;
+  background: #00474B;
+  color: #FFF;
+  font-size: 24px;
+  transition: 0.3s cubic-bezier(0.57, 0.3, 0.51, 1) background-color, 0.5s cubic-bezier(0.03, 0.89, 0.87, 0.95) color;
+}
+.tip__button--active {
+  transition: 0.3s cubic-bezier(0.57, 0.3, 0.51, 1) background-color, 0.5s cubic-bezier(0.03, 0.89, 0.87, 0.95) color;
+  background-color: #26C0AB;
+  color: #00464A;
+}
+.tip__button:hover {
+  transition: 0.3s cubic-bezier(0.57, 0.3, 0.51, 1) background-color, 0.5s cubic-bezier(0.03, 0.89, 0.87, 0.95) color;
+  color: #00464A;
+  background-color: #9FE8DF;
+}
+.tip__input {
+  flex: 1 1 auto;
+  width: 117px;
+  text-align: right;
+  color: #00474B;
+  padding: 5px 18px;
+  height: 48px;
+  border-radius: 7px;
+  background: #F4FAFA;
+  transition: 0.4s cubic-bezier(0.57, 0.3, 0.51, 1) border;
+  border: 2px solid rgba(0, 0, 0, 0);
+}
+.tip__input:hover {
+  border: 2px solid #58A89D;
+}
+.tip__input--error {
+  border: 2px solid #C68277;
+}
+
+.people {
+  min-width: 311px;
+  flex: 1 1 auto;
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 26px;
+}
+.people__text {
+  text-wrap: nowrap;
+  flex: 0 1 50%;
+  margin-bottom: 10px;
+}
+.people__error {
+  transition: 0.3s opacity;
+  opacity: 0;
+  flex: 0 1 50%;
+  color: #C68277;
+  text-align: right;
+  text-wrap: wrap;
+}
+.people__error--active {
+  opacity: 1;
+}
+.people__input {
+  flex: 0 1 100%;
+  min-width: 311px;
+  text-align: right;
+  padding: 5px 18px;
+  height: 47px;
+  border-radius: 7px;
+  background: #F4FAFA;
+  background-image: url(../img/icon-dollar.svg);
+  background-repeat: no-repeat;
+  background-position: 18px 50%;
+  transition: 0.4s cubic-bezier(0.57, 0.3, 0.51, 1) border;
+  border: 2px solid rgba(0, 0, 0, 0);
+}
+.people__input:hover {
+  border: 2px solid #58A89D;
+}
+.people__input--error {
+  border: 2px solid #C68277;
+}
+
+.result {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-radius: 15px;
+  background: #00474B;
+  width: 100%;
+  font-size: 16px;
+  padding: 24px;
+  gap: 26px;
+}
+.result__reset {
+  flex: 0 1 auto;
+  height: 48px;
+  border-radius: 5px;
+  background: #26C0AB;
+  color: #00474B;
+  font-size: 20px;
+  opacity: 1;
+  transition: 0.3s cubic-bezier(0.57, 0.3, 0.51, 1) background-color, 0.5s cubic-bezier(0.03, 0.89, 0.87, 0.95) color, 0.5s cubic-bezier(0.03, 0.89, 0.87, 0.95) opacity;
+}
+.result__reset:hover {
+  color: #00464A;
+  background-color: #9FE8DF;
+}
+.result__reset:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+.result__reset:disabled:hover {
+  background: #26C0AB;
+  color: #00474B;
+}
+
+.display {
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.display__amount {
+  display: flex;
+  justify-content: space-between;
+}
+.display__text {
+  color: #FFF;
+  line-height: 20px;
+}
+.display__text h2 {
+  font-size: 14px;
+  opacity: 0.4;
+}
+.display__cash {
+  align-self: center;
+  color: #26BEA9;
+  text-align: right;
+  font-size: 32px;
+  letter-spacing: -0.64px;
+}
+.display__cash::before {
+  content: "$";
+}
+.display__total {
+  display: flex;
+  justify-content: space-between;
+}
+
+@media (min-width: 890px) {
+  .content {
+    height: 100%;
+  }
+  .logo {
+    margin: 0 0 79px 0;
+  }
+  .calculator {
+    justify-content: space-between;
+    border-radius: 25px;
+  }
+  .result {
+    width: 413px;
+    padding: 39px;
+  }
+  .display {
+    gap: 48px;
+  }
+  .display__cash {
+    font-size: 46px;
+  }
+}
