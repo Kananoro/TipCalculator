@@ -53,19 +53,19 @@ function disableButtons() {
 }
 
 // Get value after checkInputValue
-inputBill.addEventListener("input", function (event) {
+inputBill.addEventListener("change", function (event) {
    bill = checkInputValue(inputBill, 'bill');
    calculate();
 });
 
 // Get value after checkInputValue
-inputPeople.addEventListener("input", function (event) {
+inputPeople.addEventListener("change", function (event) {
    person = checkInputValue(inputPeople, 'people');
    calculate();
 });
 
 //Get value after checkInputValue
-inputTipCustom.addEventListener("input", function (event) {
+inputTipCustom.addEventListener("change", function (event) {
    disableButtons();
    tip = checkInputValue(inputTipCustom, 'tip');
    calculate()
