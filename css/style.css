@@ -200,7 +200,8 @@ h1 {
   background: #00474B;
   color: #FFF;
   font-size: 24px;
-  transition: 0.3s cubic-bezier(0.57, 0.3, 0.51, 1) background-color, 0.5s cubic-bezier(0.03, 0.89, 0.87, 0.95) color;
+  border: 2px solid rgba(0, 0, 0, 0);
+  transition: 0.3s cubic-bezier(0.57, 0.3, 0.51, 1) background-color, 0.5s cubic-bezier(0.03, 0.89, 0.87, 0.95) color, 0.3s cubic-bezier(0.57, 0.3, 0.51, 1) border;
 }
 .tip__button--active {
   transition: 0.3s cubic-bezier(0.57, 0.3, 0.51, 1) background-color, 0.5s cubic-bezier(0.03, 0.89, 0.87, 0.95) color;
@@ -213,8 +214,7 @@ h1 {
   background-color: #9FE8DF;
 }
 .tip__button:focus {
-  color: #00464A;
-  background-color: #9FE8DF;
+  border: 2px solid #58A89D;
 }
 .tip__input {
   flex: 1 1 auto;
