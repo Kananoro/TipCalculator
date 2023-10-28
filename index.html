@@ -9,56 +9,59 @@
 </head>
 
 <body>
-   <div class="content">
+   <article class="content">
       <div class="wrapper">
-         <div class="logo"><img src="img/logo.svg" alt=""></div>
-         <div class="calculator">
-            <div class="input">
+         <header><img src="img/logo.svg" alt="logo splitter"></header>
+         <section class="calculator">
+            <section class="input">
                <div class="bill">
-                  <div class="bill__text">Bill</div>
+                  <h1 class="bill__text">Bill</h1>
                   <div class="bill__error">Can't be zero</div>
-                  <input class="bill__input" type="number" placeholder="0" id="bills">
+                  <input aria-label="Input for bill amount" class="bill__input" id="bills" tabindex="1" type="number"
+                     placeholder="0">
                </div>
                <div class="tip">
-                  <div class="tip__text">Select Tip%</div>
+                  <h1 class="tip__text">Select Tip%</h1>
                   <div class="tip__error">Can't be zero</div>
                   <div class="tip__grid">
-                     <button class="tip__button" id="5percent">5%</button>
-                     <button class="tip__button" id="10percent">10%</button>
-                     <button class="tip__button" id="15percent">15%</button>
-                     <button class="tip__button" id="25percent">25%</button>
-                     <button class="tip__button" id="50percent">50%</button>
-                     <input class="tip__input" type="number" placeholder="Custom" id="customPercent">
+                     <button class="tip__button" tabindex="2" id="5percent">5%</button>
+                     <button class="tip__button" tabindex="2" id="10percent">10%</button>
+                     <button class="tip__button" tabindex="2" id="15percent">15%</button>
+                     <button class="tip__button" tabindex="2" id="25percent">25%</button>
+                     <button class="tip__button" tabindex="2" id="50percent">50%</button>
+                     <input aria-label="Input for custom tip amount" class="tip__input" tabindex="3" type="number"
+                        placeholder="Custom" id="customPercent">
                   </div>
                </div>
                <div class="people">
-                  <div class="people__text">Number of People</div>
+                  <h1 class="people__text">Number of People</h1>
                   <div class="people__error">Can't be zero</div>
-                  <input class="people__input" type="number" placeholder="0" id="peoples">
+                  <input aria-label="Input for number of people" class="people__input" tabindex="4" type="number"
+                     placeholder="0" id="peoples">
                </div>
-            </div>
-            <div class="result">
+            </section>
+            <section class="result">
                <div class="display">
                   <div class="display__amount">
                      <div class="display__text">
-                        <h1>Tip Amount</h1>
-                        <h2>/ person</h2>
+                        <h2>Tip Amount</h2>
+                        <h3>/ person</h3>
                      </div>
-                     <div class="display__cash" id="amount">0.00</div>
+                     <h4 class="display__cash" id="amount" tabindex="5">0.00</h4>
                   </div>
                   <div class="display__total">
                      <div class="display__text">
-                        <h1>Total</h1>
-                        <h2>/ person</h>
+                        <h2>Total</h2>
+                        <h3>/ person</h>
                      </div>
-                     <div class="display__cash" id="total">0.00</div>
+                     <h4 class="display__cash" id="total" tabindex="5">0.00</h4>
                   </div>
                </div>
-               <button class="result__reset" disabled>RESET</button>
-            </div>
-         </div>
+               <button class="result__reset" tabindex="6" disabled>RESET</button>
+            </section>
       </div>
-   </div>
+      </section>
+   </article>
 
    <script src="js/script.js"></script>
 </body>

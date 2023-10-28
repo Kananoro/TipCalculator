@@ -20,7 +20,7 @@ body{
    flex-direction: column;
 }
 
-.logo {
+header {
    margin: 40px 0 32px 0;
 }
 .calculator {
@@ -32,14 +32,13 @@ body{
    border-radius: 25px 25px 0 0;
    display: flex;
    flex-wrap: wrap;
+   justify-content: center;
+}
+h1{
    color: #5E7A7D;
-   font-family: Space Mono;
    font-size: 16px;
-   font-style: normal;
-   font-weight: 700;
    line-height: 36px; /* 225% */
    text-transform: capitalize;
-   justify-content: center;
 }
 .input {
    flex: 0 1 auto;
@@ -93,6 +92,9 @@ body{
          border: 2px solid #00000000;
 		}
       &__input:hover{
+         border: 2px solid #58A89D;
+      }
+      &__input:focus{
          border: 2px solid #58A89D;
       }
       &__input--error{
@@ -154,6 +156,10 @@ body{
       color: #00464A;
       background-color: #9FE8DF;
    }
+   &__button:focus{
+      color: #00464A;
+      background-color: #9FE8DF;
+   }
 
    // .tip__input
 
@@ -170,6 +176,9 @@ body{
       border: 2px solid #00000000;
    }
    &__input:hover{
+      border: 2px solid #58A89D;
+   }
+   &__input:focus{
       border: 2px solid #58A89D;
    }
    &__input--error{
@@ -226,6 +235,9 @@ body{
       &__input:hover{
          border: 2px solid #58A89D;
       }
+      &__input:focus{
+         border: 2px solid #58A89D;
+      }
       &__input--error{
          border: 2px solid #C68277;
       }
@@ -255,6 +267,10 @@ body{
          transition: 0.3s cubic-bezier(.57,.3,.51,1) background-color, 0.5s cubic-bezier(.03,.89,.87,0.95) color, 0.5s cubic-bezier(.03,.89,.87,0.95) opacity;
 		}
       &__reset:hover{
+         color: #00464A;
+         background-color: #9FE8DF;
+      }
+      &__reset:focus{
          color: #00464A;
          background-color: #9FE8DF;
       }
@@ -289,7 +305,7 @@ body{
 		&__text {
          color: #FFF;
          line-height: 20px;
-         h2{
+         h3{
             font-size: 14px;
             opacity: 0.4;
          }
@@ -320,7 +336,7 @@ body{
    .content{
       height: 100%;
    }
-   .logo{
+   header{
       margin: 0 0 79px 0;
    }
    .calculator{

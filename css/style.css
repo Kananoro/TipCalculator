@@ -94,7 +94,7 @@ body {
   flex-direction: column;
 }
 
-.logo {
+header {
   margin: 40px 0 32px 0;
 }
 
@@ -107,14 +107,14 @@ body {
   border-radius: 25px 25px 0 0;
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
+}
+
+h1 {
   color: #5E7A7D;
-  font-family: Space Mono;
   font-size: 16px;
-  font-style: normal;
-  font-weight: 700;
   line-height: 36px; /* 225% */
   text-transform: capitalize;
-  justify-content: center;
 }
 
 .input {
@@ -163,6 +163,9 @@ body {
 .bill__input:hover {
   border: 2px solid #58A89D;
 }
+.bill__input:focus {
+  border: 2px solid #58A89D;
+}
 .bill__input--error {
   border: 2px solid #C68277;
 }
@@ -209,6 +212,10 @@ body {
   color: #00464A;
   background-color: #9FE8DF;
 }
+.tip__button:focus {
+  color: #00464A;
+  background-color: #9FE8DF;
+}
 .tip__input {
   flex: 1 1 auto;
   width: 117px;
@@ -222,6 +229,9 @@ body {
   border: 2px solid rgba(0, 0, 0, 0);
 }
 .tip__input:hover {
+  border: 2px solid #58A89D;
+}
+.tip__input:focus {
   border: 2px solid #58A89D;
 }
 .tip__input--error {
@@ -268,6 +278,9 @@ body {
 .people__input:hover {
   border: 2px solid #58A89D;
 }
+.people__input:focus {
+  border: 2px solid #58A89D;
+}
 .people__input--error {
   border: 2px solid #C68277;
 }
@@ -297,6 +310,10 @@ body {
   color: #00464A;
   background-color: #9FE8DF;
 }
+.result__reset:focus {
+  color: #00464A;
+  background-color: #9FE8DF;
+}
 .result__reset:disabled {
   opacity: 0.4;
   cursor: not-allowed;
@@ -320,7 +337,7 @@ body {
   color: #FFF;
   line-height: 20px;
 }
-.display__text h2 {
+.display__text h3 {
   font-size: 14px;
   opacity: 0.4;
 }
@@ -343,7 +360,7 @@ body {
   .content {
     height: 100%;
   }
-  .logo {
+  header {
     margin: 0 0 79px 0;
   }
   .calculator {
