@@ -53,7 +53,7 @@ function disableButtons() {
 }
 
 // Get value after checkInputValue
-inputBill.addEventListener("change keyup input click", function (event) {
+inputBill.addEventListener("change", function (event) {
    bill = checkInputValue(inputBill, 'bill');
    calculate();
 });
