@@ -19,7 +19,7 @@
                   <h1 class="bill__text">Bill</h1>
                   <div class="bill__error">Can't be zero</div>
                   <input aria-label="Input for bill amount" class="bill__input" id="bills" tabindex="1" type="number"
-                     placeholder="0">
+                     pattern="\d*" placeholder="0">
                </div>
                <div class="tip">
                   <h1 class="tip__text">Select Tip%</h1>
@@ -31,14 +31,14 @@
                      <button class="tip__button" tabindex="2" id="25percent">25%</button>
                      <button class="tip__button" tabindex="2" id="50percent">50%</button>
                      <input aria-label="Input for custom tip amount" class="tip__input" tabindex="3" type="number"
-                        placeholder="Custom" id="customPercent">
+                        pattern="\d*" placeholder="Custom" id="customPercent">
                   </div>
                </div>
                <div class="people">
                   <h1 class="people__text">Number of People</h1>
                   <div class="people__error">Can't be zero</div>
                   <input aria-label="Input for number of people" class="people__input" tabindex="4" type="number"
-                     placeholder="0" id="peoples">
+                     pattern="\d*" placeholder="0" id="peoples">
                </div>
             </section>
             <section class="result">
