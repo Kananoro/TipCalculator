@@ -13,10 +13,10 @@ const errors = {
 
 let tip, bill, person;
 
-//Check Input above zero and not empty
+//Check Input above or equals zero and not empty
 function checkInputValue(inputElement, errorType) {
    const value = inputElement.value;
-   if (value > 0 || value === '') {
+   if (value >= 0 || value === '') {
       inputElement.classList.remove(`${errorType}__input--error`);
       errors[errorType].classList.remove(`${errorType}__error--active`);
       return value;
@@ -29,7 +29,7 @@ function checkInputValue(inputElement, errorType) {
 
 //Calculate tips and add value in result display
 function calculate() {
-   if (tip > 0 && bill > 0 && person > 0) {
+   if (tip >= 0 && bill > 0 && person > 0) {
       amountTip.innerHTML = ((bill * tip / 100) / person).toFixed(2);
       totalTip.innerHTML = ((+bill + (bill * tip / 100)) / person).toFixed(2);
       buttonreset.removeAttribute('disabled');
