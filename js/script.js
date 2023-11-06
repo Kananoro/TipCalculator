@@ -13,10 +13,10 @@ const errors = {
 
 let tip, bill, person;
 
-//Check Input above or equals zero and not empty
-function checkInputValue(inputElement, errorType) {
+//Check Input above zero and not empty (exception for inputTipCustom)
+function checkInputValue(inputElement, errorType, tip) {
    const value = inputElement.value;
-   if (value >= 0 || value === '') {
+   if ((tip == true && value >= 0) || (tip == false && value > 0) || value === '') {
       inputElement.classList.remove(`${errorType}__input--error`);
       errors[errorType].classList.remove(`${errorType}__error--active`);
       return value;
@@ -54,20 +54,20 @@ function disableButtons() {
 
 // Get value after checkInputValue
 inputBill.addEventListener("change", function (event) {
-   bill = checkInputValue(inputBill, 'bill');
+   bill = checkInputValue(inputBill, 'bill', false);
    calculate();
 });
 
 // Get value after checkInputValue
 inputPeople.addEventListener("change", function (event) {
-   person = checkInputValue(inputPeople, 'people');
+   person = checkInputValue(inputPeople, 'people', false);
    calculate();
 });
 
 //Get value after checkInputValue
 inputTipCustom.addEventListener("change", function (event) {
    disableButtons();
-   tip = checkInputValue(inputTipCustom, 'tip');
+   tip = checkInputValue(inputTipCustom, 'tip', true);
    calculate()
 });
 
